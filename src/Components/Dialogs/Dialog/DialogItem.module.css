@@ -1,0 +1,17 @@
+
+
+.dialog{
+	padding: 10px;
+	
+	
+}
+
+.dialog a {
+	color: #000;
+	text-decoration: none;
+}
+
+.dialog a:focus{
+	color: brown;
+	border: 2px solid black;
+}

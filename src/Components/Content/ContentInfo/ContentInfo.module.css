@@ -1,0 +1,21 @@
+.descriptionBlock{
+	margin: 10px;
+	font-size: 24px;
+}
+.headerImg {
+	margin-bottom: 15px;
+}
+.headerImg img {
+	width: 100%;
+}
+.profileImg {
+	margin-bottom: 15px;
+}
+.avaDescriptionBlock {
+	display: flex;
+	justify-content: space-between;
+}
+.avaDescriptionBlock img {
+	width: 250px;
+	height: 250px;
+}

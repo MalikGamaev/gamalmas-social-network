@@ -1,0 +1,29 @@
+.item {
+	padding: 10px;
+	color: #000;
+	margin-top: 10px;
+	border: 3px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+
+.item img {
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+}
+
+.likeBlock{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+.likeBlock img {
+	width: 25px;
+	height: 25px
+}
+
+.messageAndLikeBlock {
+	margin-right: 10px;
+}

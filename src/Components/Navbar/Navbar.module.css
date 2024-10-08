@@ -1,0 +1,42 @@
+.nav {
+	
+	background-color: purple;
+}
+.nav a {
+	display: block;
+	margin: 30px;
+}
+.nav a:focus {
+	color: red;
+}
+.item {
+	
+	
+}
+.item a{
+	color: white;
+	text-decoration: none;
+}
+
+.item:last-child {
+	display: flex;
+	align-items: end;
+}
+
+.friendsBlock{
+	margin: 30px;
+}
+
+.friendsTitle{
+	color: #fff;
+	font-size: 30px;
+	font-style: italic;
+	margin-bottom: 10px;
+}	
+.friendsItem {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	
+	
+}
+

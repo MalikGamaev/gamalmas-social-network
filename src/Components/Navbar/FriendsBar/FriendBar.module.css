@@ -1,0 +1,8 @@
+.friendBlock{
+	color: gold;
+	margin-left: 5px;
+}
+.friendBlock img {
+	width: 50px;
+	border-radius: 30px;
+}	

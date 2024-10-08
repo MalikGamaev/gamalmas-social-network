@@ -1,0 +1,11 @@
+
+
+.message{
+	color: #fff;
+	max-width: fit-content;
+	max-height: fit-content;
+	background-color: #000;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 4px;
+}

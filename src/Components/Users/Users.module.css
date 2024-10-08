@@ -1,0 +1,22 @@
+.usersBlock img {
+	height: 40px;
+	width: 50px;
+	border-radius: 30px;
+}
+
+
+
+
+
+.userBlock{
+	margin-bottom: 10px;
+	margin-left: 5px;
+	border: 3px solid black;
+}
+
+.isFetching {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
