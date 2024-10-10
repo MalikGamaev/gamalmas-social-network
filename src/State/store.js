@@ -5,7 +5,6 @@ import setBarReducer from './Reducers/setBarReducer'
 import usersReducer from './Reducers/usersReducer'
 import authReducer from './Reducers/authReducer'
 import { thunk } from 'redux-thunk'
-import { reducer as formReducer } from 'redux-form'
 import appReducer from './Reducers/appReducer'
 import { compose } from 'redux'
 
@@ -16,7 +15,6 @@ const reducers = combineReducers({
 	setBar: setBarReducer,
 	usersPage: usersReducer,
 	auth: authReducer,
-	form: formReducer,
 	app: appReducer
 })
 

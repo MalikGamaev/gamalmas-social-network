@@ -2,8 +2,8 @@ import React, { createRef } from 'react';
 import s from './Dialogs.module.css'
 import DialogItem from './Dialog/DialogItem';
 import Message from './Messages/Message';
-import { Field, reduxForm } from 'redux-form';
-import { Textarea } from '../common/FormsControls/FormsControls';
+import { Field, Form } from 'react-final-form';
+import { CreateField, Textarea } from '../common/FormsControls/FormsControls';
 import { maxLengthCreator, required } from '../../utils/validators/validators';
 
 const maxLength100 = maxLengthCreator(100)
@@ -25,7 +25,7 @@ const Dialogs = ({ dialogs, messages, addMessages, isAuth }) => {
 				<div>
 					{messages.map(m => <Message message={m.message} name={m.id} />)}
 				</div>
-				<AddMessageFormRedux onSubmit={onClickAddMessages} />
+				<AddMessageForm onSubmit={onClickAddMessages} />
 			</div>
 		</div>
 	);
@@ -34,19 +34,23 @@ const Dialogs = ({ dialogs, messages, addMessages, isAuth }) => {
 const AddMessageForm = (props) => {
 
 	return (
-		<div className={s.message}>
-			<form onSubmit={props.handleSubmit}>
-				<div>
-					<Field name='newMessageText' component={Textarea} placeholder='Write here anything!' validate={[required, maxLength100]} />
+		<Form>
+			{({ handleSubmit }) => (
+				<div className={s.message}>
+					<form onSubmit={handleSubmit}>
+						<div>
+							{CreateField('Write here anything!', 'newMessageText', Textarea, [required, maxLength100])}						</div>
+						<div className={s.sendButton}>
+							<button>Отправить</button>
+						</div>
+					</form>
 				</div>
-				<div className={s.sendButton}>
-					<button>Отправить</button>
-				</div>
-			</form>
-		</div>
+			)}
+		</Form>
+
 	)
 }
 
-const AddMessageFormRedux = reduxForm({ form: 'dialogAddMessageForm' })(AddMessageForm)
+
 
 export default Dialogs;

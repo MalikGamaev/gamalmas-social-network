@@ -1,8 +1,8 @@
 import React, { createRef } from 'react';
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
-import { Field, reduxForm } from 'redux-form';
-import { Textarea } from '../../common/FormsControls/FormsControls';
+import { Field, Form } from 'react-final-form';
+import { CreateField, Textarea } from '../../common/FormsControls/FormsControls';
 import { maxLengthCreator, required } from '../../../utils/validators/validators';
 
 const maxLength15 = maxLengthCreator(15)
@@ -16,7 +16,7 @@ const MyPosts = ({ posts, addPostActionCreator, deletePost }) => {
 	return (
 		<div className={s.postsBlock}>
 			<h3>My posts</h3>
-			<AddPostFormRedux onSubmit={newPost} />
+			<AddPostForm onSubmit={newPost} />
 			<div className={s.postBlock}>
 				{
 					posts.map((post) =>
@@ -30,21 +30,26 @@ const MyPosts = ({ posts, addPostActionCreator, deletePost }) => {
 
 };
 
-const AddPostForm = (props) => {
+const AddPostForm = () => {
 	return (
-		<form onSubmit={props.handleSubmit}>
-			<div>
-				<Field name='newPostText' component={Textarea} placeholder='Add post!' validate={[required, maxLength15]} />
-			</div>
-			<div>
-				<button>
-					Add post
-				</button>
-			</div>
-		</form>
+		<Form>
+			{({ handleSubmit }) => (
+				<form onSubmit={handleSubmit}>
+					<div>
+						{CreateField('Add post!', 'newPostText', Textarea, [required, maxLength15])}
+					</div>
+					<div>
+						<button>
+							Add post
+						</button>
+					</div>
+				</form>
+			)}
+		</Form>
+
 	)
 }
 
-const AddPostFormRedux = reduxForm({ form: 'addMyPostForm' })(AddPostForm)
+
 
 export default MyPosts;
