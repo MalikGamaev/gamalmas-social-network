@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/gamalmas-social-network/static/css/main.638415da.css",
+    "main.js": "/gamalmas-social-network/static/js/main.d70ed0bd.js",
+    "static/media/p1_2655739_c3f5edbb.png": "/gamalmas-social-network/static/media/p1_2655739_c3f5edbb.242969a91e9798c6a41c.png",
+    "static/media/i.webp": "/gamalmas-social-network/static/media/i.17218363623ef9a2ea59.webp",
+    "static/media/Spinner-1s-200px.svg": "/gamalmas-social-network/static/media/Spinner-1s-200px.8e224d9033ba4255316c308ea27df7a0.svg",
+    "index.html": "/gamalmas-social-network/index.html",
+    "main.638415da.css.map": "/gamalmas-social-network/static/css/main.638415da.css.map",
+    "main.d70ed0bd.js.map": "/gamalmas-social-network/static/js/main.d70ed0bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.638415da.css",
+    "static/js/main.d70ed0bd.js"
+  ]
+}
